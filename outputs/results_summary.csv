@@ -1,0 +1,11 @@
+Image,Ground_Truth_Count,Detected_Count,Precision,Recall,F1_Score
+crop_007.jpg,3,3,1.0,1.0,1.0
+crop_000.jpg,3,3,1.0,1.0,1.0
+crop_002.jpg,4,4,1.0,1.0,1.0
+crop_006.jpg,3,2,1.0,0.6667,0.8
+crop_008.jpg,4,4,1.0,1.0,1.0
+crop_003.jpg,2,2,1.0,1.0,1.0
+crop_009.jpg,4,4,1.0,1.0,1.0
+crop_001.jpg,4,4,1.0,1.0,1.0
+crop_005.jpg,2,2,1.0,1.0,1.0
+crop_004.jpg,3,3,1.0,1.0,1.0
