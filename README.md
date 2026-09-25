@@ -1,20 +1,28 @@
 # Aerial Crop Stress Detection
+<img width="1584" height="672" alt="Image" src="https://github.com/user-attachments/assets/7c8d5680-b88f-411c-87c4-a99482bbd5d9" />
  
 A fine-tuned CNN object detection pipeline for identifying crop stress regions in aerial/static imagery, built end-to-end in PyTorch — data loading, model fine-tuning, evaluation, and bounding-box visualization, with no external deployment layer.
- 
+
+
 ## Overview
- 
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/3f1f677c-1dd1-47c9-a961-2ac7573e43dd" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/9ac7d407-b0f3-42c2-b512-6eac57bdbb28" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/a3c7fce9-9824-4fc0-b02a-0ba543da5857" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/b92f58a4-6910-4b62-a782-a311f5696bb1" width="100%"></td>
+  </tr>
+</table>
+
+
 This project fine-tunes a pretrained object detection model to localize crop stress regions in imagery, then evaluates detection quality using standard object-detection metrics (Precision, Recall, F1-Score) computed via IoU-based matching between predicted and ground-truth boxes.
  
+<img width="1000" height="500" alt="training_loss" src="https://github.com/user-attachments/assets/60d5f476-e9b3-4bfb-b11b-562c9cd7bb83" />
 The goal was to build a small, correct, and properly-evaluated detection pipeline rather than a large production system — the focus is on getting the fine-tuning and evaluation methodology right, end to end.
  
-## Dataset
- 
-<!-- Fill in: dataset name, source link, number of images, classes -->
-- Source: *[add dataset name/link here]*
-- Classes: `Crop_Healthy`, `Crop_Stressed`
-- Image size: 640x640
-- Split: train / validation
 ## Method
  
 1. **Preprocessing** — images resized/normalized to 640x640, ground-truth boxes parsed into `(xmin, ymin, xmax, ymax)` format
@@ -40,7 +48,6 @@ Evaluated across 10 test images:
  
 **Average Precision: 1.00 · Average Recall: 0.97 · Average F1: 0.98**
  
-![Training Loss](outputs/figures/training_loss.png)
  
 ## Key Finding
  
